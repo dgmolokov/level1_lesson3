@@ -14,7 +14,6 @@ public class GuessTheNumber {
     while (true) {
       System.out.println("Угадайте число от 0 до 9");
       int hiddenNumber = random.nextInt(9);
-      System.out.println(hiddenNumber);
       for (int i = 0; i < 3; i++) {
         int answer = scanner.nextInt();
         if (hiddenNumber > answer) {
