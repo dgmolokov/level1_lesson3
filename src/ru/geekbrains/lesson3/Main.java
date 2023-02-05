@@ -1,11 +1,15 @@
 package ru.geekbrains.lesson3;
 
+import java.util.Scanner;
+
 public class Main {
 
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Играем в первую игру:");
-    GuessTheNumber.main();
+    GuessTheNumber.playGuessTheNumber(scanner);
     System.out.println("__________________________\nИграем во вторую игру:");
-    GuessTheWord.main();
+    GuessTheWord.playGuessTheWord(scanner);
+    scanner.close();
   }
 }

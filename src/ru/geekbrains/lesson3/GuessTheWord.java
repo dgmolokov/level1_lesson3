@@ -5,17 +5,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessTheWord {
-  public static void main() {
+
+  public static void playGuessTheWord(Scanner scanner) {
     String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry",
       "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear",
       "pepper", "pineapple", "pumpkin", "potato"};
-    playGuessTheWord(words);
-  }
-
-  private static void playGuessTheWord(String[] words) {
     System.out.printf("Отгадайте слово из данного списка:\n%s\n", Arrays.toString(words));
-    Random random = new Random();
-    Scanner scanner = new Scanner(System.in);
+    var random = new Random();
     String hiddenWord = words[random.nextInt(words.length)];
     System.out.println(hiddenWord);
     while (true) {
